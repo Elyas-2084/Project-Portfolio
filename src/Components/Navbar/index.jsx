@@ -11,7 +11,6 @@ export default function Navbar() {
     const { language, toggleLanguage, t } = UseLanguage()
     const { mode, toggleMode } = UseThemeMode()
     const [openMobile, setOpenMobile] = useState(false)
-    const [lang, setLang] = useState('');
 
     const navigation = [
         { title: 'Home', path: '/' },
@@ -26,15 +25,10 @@ export default function Navbar() {
         })
     }
 
-    const handleChange = (event) => {
+    const handleLanguageChange = (event) => {
         const value = event.target.value
-        setLang(value);
 
-        if (value === 10 && language !== "en") {
-            toggleLanguage();
-        }
-
-        if (value === 20 && language !== "fa") {
+        if (value !== language) {
             toggleLanguage();
         }
     };
@@ -139,11 +133,11 @@ export default function Navbar() {
                                     labelId="demo-select-small-label"
                                     id="demo-select-small"
                                     label="Language"
-                                    value={lang}
-                                    onChange={handleChange}
+                                    value={language}
+                                    onChange={handleLanguageChange}
                                 >
-                                    <MenuItem value={10} >English</MenuItem>
-                                    <MenuItem value={20}>فارسی</MenuItem>
+                                    <MenuItem value='en' >English</MenuItem>
+                                    <MenuItem value='fa'>فارسی</MenuItem>
                                 </Select>
                             </FormControl>
 
@@ -274,10 +268,10 @@ export default function Navbar() {
                     ))}
 
                     <Button
+                        component='a'
                         variant="contained"
-                        href="/cv.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/Elyas_Resume.pdf"
+                        download={'Elyas_Resume.pdf'}
                         sx={{ mt: 2 }}>
 
                         {t("Download CV")}
@@ -310,12 +304,11 @@ export default function Navbar() {
                             labelId="demo-select-small-label"
                             id="demo-select-small"
                             label="Language"
-                            value={lang}
-                            onChange={handleChange}
-                            onClick={toggleLanguage}
-                        >
-                            <MenuItem value={10} >English</MenuItem>
-                            <MenuItem value={20}>فارسی</MenuItem>
+                            value={language}
+                            onChange={handleLanguageChange}>
+
+                            <MenuItem value='en' >English</MenuItem>
+                            <MenuItem value='fa'>فارسی</MenuItem>
                         </Select>
                     </FormControl>
                 </Box>
