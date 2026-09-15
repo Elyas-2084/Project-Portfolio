@@ -271,10 +271,10 @@ export default function Projects() {
                         mb: 3,
                       }}
                     >
-                      {project.technologies.map((technology) => (
+                      {project.technologies.map((e, index) => (
                         <Chip
-                          key={technology}
-                          label={technology}
+                          key={index}
+                          label={e}
                           size="small"
                           variant="outlined"
                           sx={{
@@ -285,10 +285,8 @@ export default function Projects() {
 
                             "&:hover": {
                               borderColor: "primary.main",
-                              backgroundColor:
-                                "rgba(16, 185, 129, 0.08)",
-                              boxShadow:
-                                "0 0 15px rgba(16, 185, 129, 0.12)",
+                              backgroundColor: "rgba(16, 185, 129, 0.08)",
+                              boxShadow: "0 0 15px rgba(16, 185, 129, 0.12)",
                               transform: "translateY(-2px)",
                               cursor: "pointer",
                             },
@@ -322,10 +320,8 @@ export default function Projects() {
                           "&:hover": {
                             transform: "translateY(-2px)",
                             borderColor: "primary.main",
-                            backgroundColor:
-                              "rgba(16, 185, 129, 0.06)",
-                            boxShadow:
-                              "0 8px 20px rgba(16, 185, 129, 0.12)",
+                            backgroundColor: "rgba(16, 185, 129, 0.06)",
+                            boxShadow: "0 8px 20px rgba(16, 185, 129, 0.12)",
                           },
 
                           "& .MuiButton-startIcon": {
