@@ -8,7 +8,7 @@ import { useState } from "react";
 import { UseLanguage } from "../../Theme/LanguageContext";
 
 export default function Projects() {
-  const { language, t } = UseLanguage();
+  const { t } = UseLanguage();
 
   const projects = [
     {
@@ -324,11 +324,6 @@ export default function Projects() {
                             boxShadow: "0 8px 20px rgba(16, 185, 129, 0.12)",
                           },
 
-                          "& .MuiButton-startIcon": {
-                            marginLeft: language === "fa" ? '8px' : 0,
-                            marginRight: language === "fa" ? 0 : '8px',
-                          },
-
                         }}
                       >
                         {t("GitHub")}
@@ -352,11 +347,6 @@ export default function Projects() {
                           "&:hover": {
                             transform: "translateY(-2px)",
                             boxShadow: "0 8px 20px rgba(16, 185, 129, 0.12)",
-                          },
-
-                          "& .MuiButton-startIcon": {
-                            marginLeft: language === "fa" ? '8px' : 0,
-                            marginRight: language === "fa" ? 0 : '8px',
                           },
                         }}
                       >
