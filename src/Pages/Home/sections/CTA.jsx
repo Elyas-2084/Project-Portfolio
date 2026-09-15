@@ -141,8 +141,8 @@ export default function CTA() {
                         <Button
                             component='a'
                             variant="outlined"
-                            href="/Elyas_Resume.pdf"
-                            download={'Elyas_Resume.pdf'}
+                            href="/Elias_Resume.pdf"
+                            download={'Elias_Resume.pdf'}
                             size="large"
                             startIcon={<Download />}
                             sx={{

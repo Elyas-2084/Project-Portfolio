@@ -171,8 +171,8 @@ export default function Navbar() {
                             <Button
                                 component='a'
                                 variant="contained"
-                                href="/Elyas_Resume.pdf"
-                                download={'Elyas_Resume.pdf'}
+                                href="/Elias_Resume.pdf"
+                                download={'Elias_Resume.pdf'}
                                 sx={{
                                     display: { xs: "none", md: "inline-flex" },
                                     px: 2.5,
@@ -270,8 +270,8 @@ export default function Navbar() {
                     <Button
                         component='a'
                         variant="contained"
-                        href="/Elyas_Resume.pdf"
-                        download={'Elyas_Resume.pdf'}
+                        href="/Elias_Resume.pdf"
+                        download={'Elias_Resume.pdf'}
                         sx={{ mt: 2 }}>
 
                         {t("Download CV")}
