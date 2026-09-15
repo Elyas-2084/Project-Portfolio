@@ -129,12 +129,6 @@ export default function CTA() {
                                 boxShadow: "none",
                                 transition: "all .25s ease",
 
-
-                                "& .MuiButton-endIcon": {
-                                    marginLeft: language === "fa" ? 0 : "8px",
-                                    marginRight: language === "fa" ? "8px" : 0,
-                                },
-
                                 "&:hover": {
                                     transform: "translateY(-3px)",
                                     boxShadow: "0 12px 25px rgba(16,185,129,.25)"
@@ -156,7 +150,6 @@ export default function CTA() {
                                 py: 1.3,
                                 borderRadius: 3,
                                 transition: "all .25s ease",
-                                gap: 1,
 
                                 "&:hover": {
                                     transform: "translateY(-3px)",
