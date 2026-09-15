@@ -230,11 +230,6 @@ export default function FeaturedProjects() {
                                                 whiteSpace: "nowrap",
                                                 transition: "all 0.2s ease",
 
-                                                "& .MuiButton-startIcon": {
-                                                    marginRight: language === "fa" ? 0 : "8px",
-                                                    marginLeft: language === "fa" ? "8px" : 0,
-                                                },
-
                                                 "&:hover": {
                                                     transform: "translateY(-2px)",
                                                     borderColor: "primary.main",
@@ -261,11 +256,6 @@ export default function FeaturedProjects() {
                                                 whiteSpace: "nowrap",
                                                 transition: "all 0.2s ease",
                                                 color: 'white',
-
-                                                "& .MuiButton-startIcon": {
-                                                    marginRight: language === "fa" ? 0 : "8px",
-                                                    marginLeft: language === "fa" ? "8px" : 0,
-                                                },
 
                                                 "&:hover": {
                                                     transform: "translateY(-2px)",
