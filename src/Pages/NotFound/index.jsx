@@ -1,10 +1,10 @@
 import { Box, Button, Container, Typography } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Link } from "react-router-dom";
 import { UseLanguage } from "../../Theme/LanguageContext";
+import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 export default function NotFound() {
-  const { t } = UseLanguage();
+  const { language, t } = UseLanguage();
 
   return (
     <Box
@@ -92,7 +92,7 @@ export default function NotFound() {
             to="/"
             variant="contained"
             size="large"
-            startIcon={<ArrowBackIcon />}
+            endIcon={language === 'fa' ? <ArrowBack /> : <ArrowForward />}
             sx={{
               position: "relative",
               px: 3,
