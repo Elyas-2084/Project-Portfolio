@@ -456,11 +456,6 @@ export default function AboutPreview() {
                                 borderRadius: 2,
                                 transition: "all 0.2s ease",
 
-                                "& .MuiButton-endIcon": {
-                                    marginLeft: language === "fa" ? 0 : "8px",
-                                    marginRight: language === "fa" ? "8px" : 0,
-                                },
-
                                 "&:hover": {
                                     transform: "translateY(-2px)",
                                     backgroundColor: "rgba(16, 185, 129, 0.06)",
