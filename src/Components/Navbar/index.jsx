@@ -25,8 +25,8 @@ export default function Navbar() {
         })
     }
 
-    const handleLanguageChange = (event) => {
-        const value = event.target.value
+    const handleLanguageChange = (e) => {
+        const value = e.target.value
 
         if (value !== language) {
             toggleLanguage();
@@ -136,8 +136,8 @@ export default function Navbar() {
                                     value={language}
                                     onChange={handleLanguageChange}
                                 >
-                                    <MenuItem value='en' >English</MenuItem>
-                                    <MenuItem value='fa'>فارسی</MenuItem>
+                                    <MenuItem value="en">English</MenuItem>
+                                    <MenuItem value="fa">فارسی</MenuItem>
                                 </Select>
                             </FormControl>
 
@@ -305,10 +305,10 @@ export default function Navbar() {
                             id="demo-select-small"
                             label="Language"
                             value={language}
-                            onChange={handleLanguageChange}>
-
-                            <MenuItem value='en' >English</MenuItem>
-                            <MenuItem value='fa'>فارسی</MenuItem>
+                            onChange={handleLanguageChange}
+                        >
+                            <MenuItem value="en">English</MenuItem>
+                            <MenuItem value="fa">فارسی</MenuItem>
                         </Select>
                     </FormControl>
                 </Box>
