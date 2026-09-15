@@ -374,8 +374,6 @@ export default function ContactMe() {
                       },
 
                       "& .MuiButton-endIcon": {
-                        marginLeft: language === "fa" ? 0 : "8px",
-                        marginRight: language === "fa" ? "8px" : 0,
                         transform: language === 'fa' && 'rotate(180deg)'
                       },
                     }}
