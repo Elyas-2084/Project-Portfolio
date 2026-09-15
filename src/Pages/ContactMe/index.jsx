@@ -4,6 +4,40 @@ import { UseLanguage } from "../../Theme/LanguageContext";
 
 export default function ContactMe() {
   const { language, t } = UseLanguage();
+  const isFa = language === 'fa';
+
+  // TextField's label is anchored to the left by default and doesn't
+  // flip on its own in RTL. If Persian, just swap which side it's anchored to.
+  const fieldSx = {
+    "& .MuiOutlinedInput-root": {
+      transition: "all 0.2s ease",
+
+      "&:hover fieldset": {
+        borderColor: "rgba(16, 185, 129, 0.45)",
+      },
+
+      "&.Mui-focused fieldset": {
+        borderColor: "primary.main",
+        borderWidth: 2,
+      },
+    },
+
+    ...(isFa && {
+      "& .MuiInputLabel-root": {
+        right: 30,
+        left: "auto",
+        transformOrigin: "right",
+      },
+
+      "& .MuiInputLabel-root.MuiInputLabel-shrink": {
+        right: 30,
+      },
+
+      "& .MuiOutlinedInput-input, & .MuiInputBase-inputMultiline, & legend": {
+        textAlign: "right",
+      },
+    }),
+  };
 
   return (
     <Box component="section">
@@ -298,59 +332,20 @@ export default function ContactMe() {
                   <TextField
                     label={t("Name")}
                     fullWidth
-                    sx={{
-                      "& .MuiOutlinedInput-root": {
-                        transition: "all 0.2s ease",
-
-                        "&:hover fieldset": {
-                          borderColor: "rgba(16, 185, 129, 0.45)",
-                        },
-
-                        "&.Mui-focused fieldset": {
-                          borderColor: "primary.main",
-                          borderWidth: 2,
-                        },
-                      },
-                    }}
+                    sx={fieldSx}
                   />
 
                   <TextField
                     label={t("Email")}
                     type="email"
                     fullWidth
-                    sx={{
-                      "& .MuiOutlinedInput-root": {
-                        transition: "all 0.2s ease",
-
-                        "&:hover fieldset": {
-                          borderColor: "rgba(16, 185, 129, 0.45)",
-                        },
-
-                        "&.Mui-focused fieldset": {
-                          borderColor: "primary.main",
-                          borderWidth: 2,
-                        },
-                      },
-                    }}
+                    sx={fieldSx}
                   />
 
                   <TextField
                     label={t("Subject")}
                     fullWidth
-                    sx={{
-                      "& .MuiOutlinedInput-root": {
-                        transition: "all 0.2s ease",
-
-                        "&:hover fieldset": {
-                          borderColor: "rgba(16, 185, 129, 0.45)",
-                        },
-
-                        "&.Mui-focused fieldset": {
-                          borderColor: "primary.main",
-                          borderWidth: 2,
-                        },
-                      },
-                    }}
+                    sx={fieldSx}
                   />
 
                   <TextField
@@ -358,20 +353,7 @@ export default function ContactMe() {
                     multiline
                     rows={5}
                     fullWidth
-                    sx={{
-                      "& .MuiOutlinedInput-root": {
-                        transition: "all 0.2s ease",
-
-                        "&:hover fieldset": {
-                          borderColor: "rgba(16, 185, 129, 0.45)",
-                        },
-
-                        "&.Mui-focused fieldset": {
-                          borderColor: "primary.main",
-                          borderWidth: 2,
-                        },
-                      },
-                    }}
+                    sx={fieldSx}
                   />
 
                   <Button
