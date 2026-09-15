@@ -204,11 +204,6 @@ export default function AboutMe() {
                     transform: "translateY(-2px)",
                     boxShadow: "0 8px 20px rgba(16, 185, 129, 0.25)",
                   },
-
-                  "& .MuiButton-endIcon": {
-                    marginLeft: language === "fa" ? 0 : "8px",
-                    marginRight: language === "fa" ? "8px" : 0,
-                  },
                 }}
               >
                 {t("View My Projects")}
@@ -869,11 +864,6 @@ export default function AboutMe() {
                 "&:hover": {
                   transform: "translateY(-2px)",
                   boxShadow: "0 8px 20px rgba(16, 185, 129, 0.25)",
-                },
-
-                "& .MuiButton-endIcon": {
-                  marginLeft: language === "fa" ? 0 : "8px",
-                  marginRight: language === "fa" ? "8px" : 0,
                 },
               }}
             >
