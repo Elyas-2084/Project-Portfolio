@@ -16,24 +16,24 @@ export const createAppTheme = (mode, language = "en") => {
       background:
         mode === "dark"
           ? {
-              default: "#0B0F19",
-              paper: "#111827",
-            }
+            default: "#0B0F19",
+            paper: "#111827",
+          }
           : {
-              default: "#F8FAFC",
-              paper: "#FFFFFF",
-            },
+            default: "#F8FAFC",
+            paper: "#FFFFFF",
+          },
 
       text:
         mode === "dark"
           ? {
-              primary: "#F8FAFC",
-              secondary: "#94A3B8",
-            }
+            primary: "#F8FAFC",
+            secondary: "#94A3B8",
+          }
           : {
-              primary: "#0F172A",
-              secondary: "#64748B",
-            },
+            primary: "#0F172A",
+            secondary: "#64748B",
+          },
 
       divider: mode === "dark" ? "#1E293B" : "#E2E8F0",
     },
@@ -103,6 +103,26 @@ export const createAppTheme = (mode, language = "en") => {
     shape: {
       borderRadius: 10,
     },
+
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          startIcon: {
+            marginRight: 0,
+            marginLeft: 0,
+            marginInlineEnd: 8,
+            marginInlineStart: -4,
+          },
+
+          endIcon: {
+            marginRight: 0,
+            marginLeft: 0,
+            marginInlineStart: 8,
+            marginInlineEnd: -4,
+          }
+        }
+      }
+    }
   });
 
   // Smoothly scales headings down on smaller screens instead of
