@@ -291,11 +291,6 @@ export default function FeaturedProjects() {
                             py: 1.2,
                             borderRadius: 2,
                             transition: "all 0.2s ease",
-
-                            "& .MuiButton-endIcon": {
-                                marginLeft: language === "fa" ? 0 : "8px",
-                                marginRight: language === "fa" ? "8px" : 0,
-                            },
                             
                             "&:hover": {
                                 transform: "translateY(-2px)",
